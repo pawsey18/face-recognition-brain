@@ -97,7 +97,7 @@ class App extends Component {
       .then(response => {
         console.log('hi', response)
         if (response) {
-          fetch('https://desolate-bastion-30219.herokuapp.com:3000/image', {
+          fetch('https://desolate-bastion-30219.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
