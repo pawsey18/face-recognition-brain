@@ -44,7 +44,6 @@ class App extends Component {
   constructor() {
     super();
     this.state = initialState;
-    
   }
 
 
@@ -58,9 +57,6 @@ class App extends Component {
       joined: data.joined
     }})
   }
-
-
-
 
 
   calculateFaceLocation = (data) => {
@@ -86,7 +82,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-    fetch('https://desolate-bastion-30219.herokuapp.com/imageurl', {
+    fetch('desolate-bastion-30219.herokuapp.com/imageurl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -97,7 +93,7 @@ class App extends Component {
       .then(response => {
         console.log('hi', response)
         if (response) {
-          fetch('https://desolate-bastion-30219.herokuapp.com/image', {
+          fetch('desolate-bastion-30219.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
